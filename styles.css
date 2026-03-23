@@ -1,0 +1,117 @@
+/**
+ * Le Marchand Styles
+ *
+ * Yahoo商品カードの背景色を利益に応じて色分けする
+ * 不明商品はグレーアウトする
+ */
+
+/* ===== Yahoo商品カードの利益ベース色分け ===== */
+.qse-item-colored {
+  background-color: var(--qse-bg-color, transparent) !important;
+  border-left: 4px solid var(--qse-border-color, transparent) !important;
+  border-radius: 4px !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* ===== 調整後利益バッジ ===== */
+.qse-profit-badge {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 3px 8px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.qse-profit-badge.qse-profit-plus {
+  color: #0d7c66;
+  background: rgba(13, 148, 136, 0.10);
+}
+
+.qse-profit-badge.qse-profit-minus {
+  color: #c0392b;
+  background: rgba(220, 38, 38, 0.08);
+}
+
+/* ===== Keepaグラフ ===== */
+.qse-keepa-graph {
+  padding: 2px 4px;
+  text-align: center;
+}
+
+.qse-keepa-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 3px;
+}
+
+/* ===== 不明商品のグレーアウト（Yahoo商品カード側） ===== */
+.qse-item-unknown {
+  background-color: rgba(130, 130, 130, 0.45) !important;
+  border-left: 4px solid rgba(100, 100, 100, 0.7) !important;
+  border-radius: 4px !important;
+  position: relative !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* 不明ラベルを表示（Yahoo商品カード上） */
+.qse-item-unknown::after {
+  content: "Amazon\672A\767B\9332";
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  font-size: 11px;
+  color: #fff;
+  font-weight: bold;
+  background: rgba(120, 120, 120, 0.75);
+  padding: 2px 8px;
+  border-radius: 3px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ===== ブラックアウト表示 ===== */
+.qse-item-blackout {
+  background-color: rgba(0, 0, 0, 0.70) !important;
+  border-left: 4px solid rgba(0, 0, 0, 0.85) !important;
+  border-radius: 4px !important;
+  position: relative !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.qse-item-blackout * {
+  color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.qse-item-blackout img {
+  opacity: 0.15 !important;
+}
+
+/* ===== 非表示 ===== */
+.qse-item-hidden {
+  display: none !important;
+}
+
+/* ===== 手数料エラー商品 ===== */
+.qse-item-fee-error {
+  background-color: rgba(255, 165, 0, 0.25) !important;
+  border-left: 4px solid rgba(255, 140, 0, 0.7) !important;
+  border-radius: 4px !important;
+  position: relative !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.qse-item-fee-error::after {
+  content: "\624B\6570\6599\30A8\30E9\30FC";
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  font-size: 11px;
+  color: #fff;
+  font-weight: bold;
+  background: rgba(255, 140, 0, 0.80);
+  padding: 2px 8px;
+  border-radius: 3px;
+  z-index: 10;
+  pointer-events: none;
+}

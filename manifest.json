@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Le Marchand",
+  "version": "1.0.0",
+  "description": "Yahoo商品の利益自動計算・色分け表示・不明商品のグレーアウト",
+  "permissions": ["storage"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://shopping.yahoo.co.jp/*",
+        "https://store.shopping.yahoo.co.jp/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

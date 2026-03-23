@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: "Segoe UI", "Hiragino Sans", sans-serif;
+      font-size: 14px;
+      padding: 16px 20px;
+      min-width: 320px;
+      color: #333;
+    }
+    h2 {
+      font-size: 16px;
+      margin: 0 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .setting-row {
+      margin-bottom: 14px;
+    }
+    .setting-row label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+    .setting-row select {
+      width: 100%;
+      padding: 6px 8px;
+      font-size: 13px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .saved-msg {
+      color: #0d7c66;
+      font-size: 12px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      margin-top: 12px;
+    }
+    .saved-msg.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h2>Le Marchand</h2>
+
+  <div class="setting-row">
+    <label>Amazon未登録の商品</label>
+    <select id="unknownDisplay">
+      <option value="normal">通常表示</option>
+      <option value="gray">グレー表示</option>
+      <option value="blackout">ブラックアウト</option>
+      <option value="hidden">非表示</option>
+    </select>
+  </div>
+
+  <div class="setting-row">
+    <label>赤字の商品</label>
+    <select id="deficitDisplay">
+      <option value="normal">通常表示</option>
+      <option value="colored">赤字表示</option>
+      <option value="blackout">ブラックアウト</option>
+      <option value="hidden">非表示</option>
+    </select>
+  </div>
+
+  <div class="setting-row">
+    <label>手数料エラーの商品</label>
+    <select id="feeErrorDisplay">
+      <option value="normal">通常表示</option>
+      <option value="warning">警告表示</option>
+      <option value="blackout">ブラックアウト</option>
+      <option value="hidden">非表示</option>
+    </select>
+  </div>
+
+  <div class="saved-msg" id="savedMsg">保存しました</div>
+
+  <script src="options.js"></script>
+</body>
+</html>
