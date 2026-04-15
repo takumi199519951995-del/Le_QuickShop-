@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - Le Marchand</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Hiragino Sans", "Segoe UI", sans-serif; color: #333; line-height: 1.8; }
+    header { background: #1a1a2e; color: #fff; padding: 40px 20px; text-align: center; }
+    header h1 { font-size: 1.8rem; }
+    main { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+    h2 { font-size: 1.2rem; margin: 32px 0 12px; border-left: 4px solid #1a1a2e; padding-left: 12px; }
+    p { margin-bottom: 16px; font-size: 0.95rem; color: #444; }
+    ul { margin: 0 0 16px 24px; font-size: 0.95rem; color: #444; }
+    ul li { margin-bottom: 8px; }
+    footer { background: #f0f0f0; text-align: center; padding: 24px; font-size: 0.85rem; color: #888; margin-top: 60px; }
+    .back-link { margin-top: 40px; }
+    .back-link a { color: #1a1a2e; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>プライバシーポリシー</h1>
+  </header>
+
+  <main>
+    <p>Le Marchand（以下「本拡張機能」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。</p>
+
+    <h2>収集する情報</h2>
+    <p>本拡張機能は以下の情報をユーザーの端末内にのみ保存します。</p>
+    <ul>
+      <li>GoogleスプレッドシートのスプレッドシートID・シート名</li>
+      <li>Keepa APIキー</li>
+      <li>Amazon SP-API認証情報（クライアントID・シークレット・リフレッシュトークン・セラーID）</li>
+      <li>表示設定（色分け・フィルター設定など）</li>
+    </ul>
+    <p>これらの情報はChromeの同期ストレージ（chrome.storage.sync）に保存され、開発者を含む第三者には送信・共有されません。</p>
+
+    <h2>情報の利用目的</h2>
+    <ul>
+      <li>Googleスプレッドシートへの商品情報の転記</li>
+      <li>Keepa APIを通じた売上個数データの取得</li>
+      <li>Amazon SP-APIを通じた出品制限情報の取得</li>
+      <li>ユーザー設定の保存・復元</li>
+    </ul>
+
+    <h2>第三者サービスへのアクセス</h2>
+    <p>本拡張機能は以下の外部サービスにアクセスします。</p>
+    <ul>
+      <li><strong>Google Sheets API</strong>: 商品情報の転記のため</li>
+      <li><strong>Keepa API</strong>: 月間売上個数の取得のため</li>
+      <li><strong>Amazon SP-API</strong>: 出品制限の確認のため</li>
+    </ul>
+    <p>各サービスのプライバシーポリシーは各サービスのウェブサイトをご参照ください。</p>
+
+    <h2>情報の第三者提供</h2>
+    <p>本拡張機能は、ユーザーの個人情報を第三者に販売・提供・共有することは一切ありません。</p>
+
+    <h2>お問い合わせ</h2>
+    <p>プライバシーポリシーに関するご質問は、GitHubリポジトリのIssuesよりお問い合わせください。</p>
+
+    <h2>改定</h2>
+    <p>本ポリシーは必要に応じて改定することがあります。重要な変更がある場合はリポジトリにて告知します。</p>
+    <p>最終更新日: 2026年4月</p>
+
+    <div class="back-link">
+      <a href="index.html">← ホームに戻る</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Le Marchand. All rights reserved.</p>
+  </footer>
+</body>
+</html>
